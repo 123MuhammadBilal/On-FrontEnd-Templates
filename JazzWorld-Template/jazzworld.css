@@ -1,0 +1,93 @@
+body, h1 , h2 , h3 , h4 , a , li , ul 
+{margin:0px; padding:0px;}
+.container{max-width:720px; margin: 0 auto;}
+	/*====================sec_1==================*/
+.container1{max-width:680px; margin: 0 auto; 	}
+.jazz_st{
+	background-image:url('top_bg.png');
+	width:100%;
+	float:left;
+	}
+	.st{margin: 20px 0px 20px 0px;}
+	.top_left{margin-left: 20px; width:495px; float:left;}
+	.top_left img{ float:left;}
+	
+	.top_left h1{
+	margin-top: 10px;
+    text-align: center;
+    color: white;
+	}
+	
+	.top_right{width:170px; float:left;}
+	.top_left img{ float:left;}
+	/*====================sec_2==================*/
+.container1{max-width:720px; margin: 0 auto;}
+.jazz_nd{
+	background-color:black;
+	width:100%;
+	float:left;
+	}
+	.top_left_nd{width:250px; float:left;}
+	.top_left_nd img{
+	margin: 25px;
+    width: 100px;
+    border-radius: 50%;
+	}
+	
+	.details_nd{
+    width: 100px;
+    float: right;
+	}
+	.details_nd h1{
+	margin: 40px 0px 0px 0px;
+    color: white;
+    height: 40px;
+    font-size: 30px;
+	}
+	.details_nd h2{
+    float: left;
+    font-size: 15px;
+    color: white;
+    margin-top: 15px;
+	}
+	.details_nd p{
+    float: right;
+    margin: 0px 8px 0px 0px;
+    color: white;
+    font-size: 30px;
+	}
+	.top_rigth_nd{width:300px; float:right;  margin: 65px 35px 0px 0px}
+	.top_rigth_nd a{    
+	padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #c4161c;
+    font-size: 20px;
+    border-radius: 5px;}
+		/*====================sec_3==================*/
+    .container3{max-width:615px; margin: 0 auto;}
+    .jazz_rd{
+	background-color:white;
+	width:100%;
+	float:left;
+	}
+	.hd{
+    padding: 45px;
+    border: 2px solid black;
+    border-radius: 75px;
+    text-align: center;
+    margin: 10px;	
+	}
+	.out-rd{margin-left:60px;}
+	.inr-rd{float:left; width:29%; text-align:center;}
+	.inr-rd h1{margin-top:95px; text-align:center;}
+	.inr-rd h2{font-size:13px;}
+	
+	.lnk_v a{    
+	text-decoration: none;
+    float: right;
+    width: 70px;
+    margin-top: 40px;
+    color: red;
+    font-size: 16px;
+	}

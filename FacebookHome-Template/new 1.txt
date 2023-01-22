@@ -1,0 +1,7 @@
+<div class="value">
+<form>
+<input type="Email or phone number" id="name" name="name" placeholder="Email or phone number">
+<input type="number" id="password" name="name" placeholder="Password">
+<input class="inner" type="submite" id="submite" name="submite" value="Log in">
+</form>
+</div>

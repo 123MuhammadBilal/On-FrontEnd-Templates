@@ -1,0 +1,54 @@
+body h1 , h2 , h3 , h4 , a , li , ul {margin:0px; padding:0px;}
+.container{max-width:720px; margin: 0 auto;}
+	/*====================sec_1==================*/
+.container1{max-width:680px; margin: 0 auto; margin-top:25px; margin-bottom:25px;}
+.reward_bg{
+	background-color: #f9f7f7;
+	width:100%;
+	float:left;
+	height:800px;
+	}
+	.reward_bgi{
+	background-color: #00000057;
+	width:100%;
+	float:left;
+	height:800px;
+	}
+	
+.reward_st{
+	background-color: #c4161c;
+	width:100%;
+	float:left;
+	}
+	.top_reward img{
+    width: 60px;
+    float: left;
+	}
+	.top_reward h1{
+    text-align: center;
+    color: #ffffffc9;	
+	}
+	/*====================sec_2==================*/
+	.container2{max-width:410px; margin: 0 auto; margin-top:160px;}
+	.down_reward{background-color:white;}
+	.down_reward img{width:410px;}	
+	.down_reward h1{
+	text-align:center;
+	margin: 20px 0px 20px;
+	}	
+	.down_reward p{
+    margin: 0px 0px 25px 0px;
+	width: 78%;
+    text-align: center;
+    margin-left: 45px;
+    font-size: 14px;
+	}	
+	.down_reward a{
+	font-weight: bold;
+    font-size: 15px;
+    background-color: #c4161c;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px 165px 15px 166px;	
+	}	

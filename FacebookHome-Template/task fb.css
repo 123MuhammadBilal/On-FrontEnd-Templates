@@ -1,0 +1,76 @@
+body, h1, h2, h3, h4, {margin: 0px; padding:0px; width:0px;}
+.container{max-width:720px; margin:0 auto; }
+.fb-back{
+	background-color: #f0f2f5;;
+    background-repeat: no-repeat;
+	background-size:cover;
+    float: left;
+    width: 100%;
+    padding: 182px 0px;
+}
+.fb-head{width:60%; float:left;}
+
+.fb-head h1{    
+    color: #1877f2;
+    font-size: 50px;
+    height: 35px;
+    }
+	
+.fb-head p{
+	color:#565050s;
+	font-size:25px;
+	}
+
+.value{width:40%; float: right;}
+.inner{background-color:#1877f2;}
+
+.value form {
+    border: 2px solid #efeaea;
+    background-color: white;
+    float: right;
+    padding: 9px;
+}
+	
+
+.value input{width:100%; float:right;}
+.value input{    
+    margin: 4px 0px 4px 4px;
+    width: 100%;
+    float: right;
+	background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+	}
+	
+.linker{
+	font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    padding: 0px 77px 22px 78px;
+    border-bottom: 2px solid #efeaea;
+	}
+.linker2{
+	color: white;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 0px 0px 28px;
+    padding: 10px 30px 10px 30px;
+    background-color: #00b100;
+    border-radius: 4px;
+	}
+	
+.fb-ending{}
+.fb-ending h1{
+	    font-size: 12px;
+    float: left;
+    margin: 0px 6px 0px 33px;
+}
+.fb-ending p{font-size: 12px;}
+
+.l1{
+	margin: 0px 13px 0px 13px;
+}
+.l2{
+	    margin: 48px 20px 12px 20px;
+	}
