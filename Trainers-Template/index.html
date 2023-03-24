@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <title>Traniners</title>
+</head>
+
+<body>
+    <!-- navigation -->
+    <div class="container">
+        <div class="navigation">
+            <div class="navIco">
+                <img src="imgs/navIcon.png" alt="naviIcon">
+                <p>Trainers (16)</p>
+                <button id="addTrainers">+ New Trainer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="container">
+        <div class="banner" id="banner">
+            <!-- profile nav -->
+            <div class="user">
+                <div class="userProfile">
+                    <img src="imgs/trainer 30x30.png" alt="trainer">
+                    <span id="mainName">Lorem Ipsum</span>
+                    <p id="mainMail">o.engr.bilal@gmail.com</p>
+                </div>
+                <div class="action">
+                    <a href="#" id="mainEdit"><i class="fa fa-pencil"></i></a>
+                    <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+                    <a href="#" id="mainCros"><i class="fa fa-times"></i></a>
+                    <div class="options">
+                        <li>Delete</li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- profile details -->
+            <div class="personalDetails">
+                <div class="userImg">
+                    <img src="imgs/trainer 185x185.png" alt="">
+                </div>
+                <div class="userDetails">
+                    <div class="mainDetails">
+                        <div class="details">
+                            <h1 id="innerFname">Status</h1>
+                            <h2 id="innerFnameGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerLname">Status</h1>
+                            <h2 id="innerLnameGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerGmail">Status</h1>
+                            <h2 id="innerGmailGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerPass">Status</h1>
+                            <h2 id="innerPassGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                    </div>
+                    <div class="mainDetails">
+                        <div class="details">
+                            <h1 id="innerFname">Status</h1>
+                            <h2 id="innerFnameGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerLname">Status</h1>
+                            <h2 id="innerLnameGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerGmail">Status</h1>
+                            <h2 id="innerGmailGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerPass">Status</h1>
+                            <h2 id="innerPassGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                    </div>
+                    <div class="mainDetails">
+                        <div class="details">
+                            <h1 id="innerFname">Status</h1>
+                            <h2 id="innerFnameGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerLname">Status</h1>
+                            <h2 id="innerLnameGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerGmail">Status</h1>
+                            <h2 id="innerGmailGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                        <div class="details">
+                            <h1 id="innerPass">Status</h1>
+                            <h2 id="innerPassGot">Lorem ipsum dolor sit</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- trainers -->
+    <div class="container_appending">
+        <div class="trainerDetails" id="appendTrainer">
+            <!-- here is my appended items -->
+        </div>
+    </div>
+
+    <!-- form -->
+    <div class="container_trainer_add" id="container_trainer_add">
+        <button id="crossBtn">X</button>
+        <form id="taskForm">
+            <input type="fname" name="text" id="inputNameFirst" placeholder="first name" autocomplete="off" required />
+            <span id="inputNameFirstValidation"></span>
+            <input type="mail" name="text" id="inputNameLast" placeholder="last name" autocomplete="off" required />
+            <span id="inputNameLastValidation"></span>
+            <input type="mail" name="text" id="inputText" placeholder="email address" autocomplete="off" required />
+            <span id="inputTextValidation"></span>
+            <input type="password" name="text" id="inputPass" placeholder="password" autocomplete="off" required />
+            <i id="password-toggle" class="fa fa-eye"></i>
+            <span id="inputPassValidation"></span>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+
+    <!-- javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById("container_trainer_add").style.display = "none";
+    </script>
+</body>
+
+</html>

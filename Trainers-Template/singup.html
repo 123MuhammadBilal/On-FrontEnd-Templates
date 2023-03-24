@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <title>SingUp</title>
+</head>
+
+<body>
+    <!-- singup form -->
+    <div class="container_trainer_add" id="container_trainer_add">
+        <form id="taskForm">
+            <input type="fname" name="text" id="inputNameFirst" placeholder="first name" autocomplete="off" required />
+            <span id="inputNameFirstValidation"></span>
+            <input type="mail" name="text" id="inputNameLast" placeholder="last name" autocomplete="off" required />
+            <span id="inputNameLastValidation"></span>
+            <input type="mail" name="text" id="inputText" placeholder="email address" autocomplete="off" required />
+            <span id="inputTextValidation"></span>
+            <input type="password" name="text" id="inputPass" placeholder="password" autocomplete="off" required />
+            <i id="password-toggle" class="fa fa-eye"></i>
+            <span id="inputPassValidation"></span>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+
+    <!-- javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        // form validation
+
+        const firstNameInput = document.getElementById("inputNameFirst");
+        const lastNameInput = document.getElementById("inputNameLast");
+        const emailInput = document.getElementById("inputText");
+        const passwordInput = document.getElementById("inputPass");
+
+        const inputNameFirstValidation = document.getElementById("inputNameFirstValidation");
+        const inputNameLastValidation = document.getElementById("inputNameLastValidation");
+        const inputTextValidation = document.getElementById("inputTextValidation");
+        const inputPassValidation = document.getElementById("inputPassValidation");
+
+        const form = document.querySelector("form");
+        const submit = document.getElementById("submit");
+        // Validate first name (must be at least 2 characters long)
+        firstNameInput.addEventListener("blur", () => {
+            if (firstNameInput.value.length < 2) {
+                inputNameFirstValidation.innerHTML =
+                    "First name must be at least 2 characters long";
+            } else {
+                inputNameFirstValidation.innerHTML = "";
+            }
+        });
+
+        // Validate last name (must be at least 2 characters long)
+        lastNameInput.addEventListener("blur", () => {
+            if (lastNameInput.value.length < 2) {
+                inputNameLastValidation.innerHTML =
+                    "Last name must be at least 2 characters long";
+            } else {
+                inputNameLastValidation.innerHTML = "";
+            }
+        });
+
+        // Validate email (must be a valid email address)
+        emailInput.addEventListener("blur", () => {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!regex.test(emailInput.value)) {
+                inputTextValidation.innerHTML = "Please enter a valid email address";
+            } else {
+                inputTextValidation.innerHTML = "";
+            }
+        });
+
+        // Validate password (must be at least 8 characters long)
+        passwordInput.addEventListener("blur", () => {
+            if (passwordInput.value.length < 8) {
+                inputPassValidation.innerHTML =
+                    "Password must be at least 8 characters long";
+            } else {
+                inputPassValidation.innerHTML = "";
+            }
+        });
+        // add an event listener to the button
+        const submitBtn = document.getElementById("submit");
+        submitBtn.addEventListener("click", (event) => {
+            event.preventDefault(); // prevent the form from submitting
+            if (
+                firstNameInput.value.length >= 2 &&
+                lastNameInput.value.length >= 2 &&
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value) &&
+                passwordInput.value.length >= 8
+            ) {
+                location.replace('index.html');
+            } else {
+                inputPassValidation.innerHTML = "Please fill the form carefully";
+            }
+        });
+    </script>
+</body>
+
+</html>
