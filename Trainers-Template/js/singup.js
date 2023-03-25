@@ -22,7 +22,7 @@ firstNameInput.addEventListener("blur", () => {
   const firstName = firstNameInput.value.trim();
   if (!regex.test(firstName) || firstName.length < 2 || firstName.length > 9) {
     inputNameFirstValidation.innerHTML =
-      "First name must be between 2 and 9 characters long and contain only letters and spaces.";
+    "Invalid";
   } else {
     inputNameFirstValidation.innerHTML = "";
   }
@@ -33,7 +33,7 @@ lastNameInput.addEventListener("blur", () => {
   const lastName = lastNameInput.value.trim();
   if (!regex.test(lastName) || lastName.length < 2 || lastName.length > 9) {
     inputNameLastValidation.innerHTML =
-      "First name must be between 2 and 9 characters long and contain only letters and spaces.";
+    "Invalid";
   } else {
     inputNameLastValidation.innerHTML = "";
   }
@@ -52,7 +52,7 @@ emailInput.addEventListener("blur", () => {
 passwordInput.addEventListener("blur", () => {
   if (passwordInput.value.length < 8 || passwordInput.value.length > 15) {
     inputPassValidation.innerHTML =
-      "Password must be at least 8 characters and no more than 15 characters long.";
+      "Invalid";
   } else {
     inputPassValidation.innerHTML = "";
   }
