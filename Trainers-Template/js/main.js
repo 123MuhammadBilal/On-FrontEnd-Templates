@@ -1,56 +1,57 @@
 //onload addEventListener
 window.addEventListener("load", () => {
-
   // hide & show functions
 
-const container_trainer_add = document.getElementById("container_trainer_add");
-const addTrainers = document.getElementById("addTrainers");
-const crossBtn = document.getElementById("crossBtn");
-const mainCros = document.getElementById("mainCros");
-const banner = document.getElementById("banner");
+  const container_trainer_add = document.getElementById(
+    "container_trainer_add"
+  );
+  const addTrainers = document.getElementById("addTrainers");
+  const crossBtn = document.getElementById("crossBtn");
+  const mainCros = document.getElementById("mainCros");
+  const banner = document.getElementById("banner");
 
-mainCros.addEventListener("click", () => {
-  if ((banner.style.display = "block")) {
-    banner.style.display = "none";
-  } else {
-    banner.style.display = "block";
-  }
-});
-addTrainers.addEventListener("click", () => {
-  if ((container_trainer_add.style.display = "none")) {
-    container_trainer_add.style.display = "block";
-  } else {
-    container_trainer_add.style.display = "none";
-  }
-});
-crossBtn.addEventListener("click", () => {
-  const saveElements = document.querySelectorAll("#SAVE");
-for (let i = 0; i < saveElements.length; i++) {
-  saveElements[i].click();
-}
-  if ((container_trainer_add.style.display = "block")) {
-    container_trainer_add.style.display = "none";
-  } else {
-    container_trainer_add.style.display = "block";
-  }
-});
+  mainCros.addEventListener("click", () => {
+    if ((banner.style.display = "block")) {
+      banner.style.display = "none";
+    } else {
+      banner.style.display = "block";
+    }
+  });
+  addTrainers.addEventListener("click", () => {
+    if ((container_trainer_add.style.display = "none")) {
+      container_trainer_add.style.display = "block";
+    } else {
+      container_trainer_add.style.display = "none";
+    }
+  });
+  crossBtn.addEventListener("click", () => {
+    const saveElements = document.querySelectorAll("#SAVE");
+    for (let i = 0; i < saveElements.length; i++) {
+      saveElements[i].click();
+    }
+    if ((container_trainer_add.style.display = "block")) {
+      container_trainer_add.style.display = "none";
+    } else {
+      container_trainer_add.style.display = "block";
+    }
+  });
 
-// password checker
-const passwordField = document.getElementById("inputPass");
-const passwordToggle = document.getElementById("password-toggle");
-passwordToggle.addEventListener("click", () => {
-  if (passwordField.type === "password") {
-    passwordField.type = "text";
-    passwordToggle.classList.remove("fa-eye");
-    passwordToggle.classList.add("fa-eye-slash");
-    passwordField.classList.add("eyeManage");
-  } else {
-    passwordField.type = "password";
-    passwordToggle.classList.remove("fa-eye-slash");
-    passwordToggle.classList.add("fa-eye");
-    passwordField.classList.add("eyeManage");
-  }
-});
+  // password checker
+  const passwordField = document.getElementById("inputPass");
+  const passwordToggle = document.getElementById("password-toggle");
+  passwordToggle.addEventListener("click", () => {
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      passwordToggle.classList.remove("fa-eye");
+      passwordToggle.classList.add("fa-eye-slash");
+      passwordField.classList.add("eyeManage");
+    } else {
+      passwordField.type = "password";
+      passwordToggle.classList.remove("fa-eye-slash");
+      passwordToggle.classList.add("fa-eye");
+      passwordField.classList.add("eyeManage");
+    }
+  });
 
   //select input name first
   const inputNameFirst = document.querySelector("#inputNameFirst");
@@ -108,7 +109,7 @@ passwordToggle.addEventListener("click", () => {
   btn.value = "Signup";
   firstNameInput.addEventListener("blur", () => {
     if (firstNameInput.value.length < 2 || firstNameInput.value.length > 9) {
-      inputNameFirstValidation.innerHTML ="Last name must be more 2 characters and less then 9";
+      inputNameFirstValidation.innerHTML = "Invalid";
     } else {
       inputNameFirstValidation.innerHTML = "";
     }
@@ -116,8 +117,7 @@ passwordToggle.addEventListener("click", () => {
 
   lastNameInput.addEventListener("blur", () => {
     if (lastNameInput.value.length < 2 || lastNameInput.value.length > 9) {
-      inputNameLastValidation.innerHTML =
-        "Last name must be more 2 characters and less then 9";
+      inputNameLastValidation.innerHTML = "Invalid";
     } else {
       inputNameLastValidation.innerHTML = "";
     }
@@ -127,20 +127,20 @@ passwordToggle.addEventListener("click", () => {
   emailInput.addEventListener("blur", () => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!regex.test(emailInput.value)) {
-      inputTextValidation.innerHTML = "Please enter a valid email address";
+      inputTextValidation.innerHTML = "Invalid";
     } else {
       inputTextValidation.innerHTML = "";
     }
   });
 
-passwordInput.addEventListener("blur", () => {
-  if (passwordInput.value.length < 8 || passwordInput.value.length > 15) {
-    inputPassValidation.innerHTML = "Password must be at least 8 characters and no more than 15 characters long.";
-  } else {
-    inputPassValidation.innerHTML = "";
-  }
-});
-
+  passwordInput.addEventListener("blur", () => {
+    if (passwordInput.value.length < 8 || passwordInput.value.length > 15) {
+      inputPassValidation.innerHTML =
+        "Password must be at least 8 characters less then 15";
+    } else {
+      inputPassValidation.innerHTML = "";
+    }
+  });
 
   form.addEventListener("submit", (refresh) => {
     //stop to refresh page on submit
@@ -300,18 +300,18 @@ passwordInput.addEventListener("blur", () => {
         inputNameLast.value = nameL.innerHTML;
         inputGmail.value = mailG.innerHTML;
         inputPass.value = passW.innerHTML;
-      
+
         //append button to save editable element
         const saveme = document.createElement("button");
         saveme.innerHTML = "Save";
-      
+
         // using id for styling
         saveme.id = "SAVE";
         //hidding 'ADD' button
         btn.style.display = "none";
-      
+
         form.appendChild(saveme);
-      
+
         let saveElements = document.querySelectorAll("#SAVE");
         // Hide all the previous 'SAVE' elements except the last one
         for (let i = 0; i === saveElements.length - 1; i++) {
@@ -319,19 +319,19 @@ passwordInput.addEventListener("blur", () => {
         }
         // Show the latest 'SAVE' element
         saveElements[saveElements.length - 1].style.display = "block";
-      
+
         container_trainer_add.style.display = "block";
         saveme.addEventListener("click", () => {
-          // update the values in the list
+          //update the values in the list
           nameF.innerHTML = inputNameFirst.value + " ";
           nameL.innerHTML = inputNameLast.value;
           mailG.innerHTML = inputGmail.value;
           passW.innerHTML = inputPass.value;
-      
+
           // remove the "SAVE" button and show the "ADD" button
           form.removeChild(saveme);
           btn.style.display = "block";
-      
+
           // clear the input fields
           inputNameFirst.value = "";
           inputNameLast.value = "";
@@ -347,5 +347,3 @@ passwordInput.addEventListener("blur", () => {
     }
   });
 });
-
-
