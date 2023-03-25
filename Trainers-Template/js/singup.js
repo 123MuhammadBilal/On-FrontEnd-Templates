@@ -64,8 +64,10 @@ submitBtn.addEventListener("click", (event) => {
   if (
     firstNameInput.value.length >= 2 &&
     firstNameInput.value.length <= 9 &&
+    /^[a-zA-Z ]+$/.test(firstNameInput.value.trim()) &&
     lastNameInput.value.length >= 2 &&
     lastNameInput.value.length <= 9 &&
+    /^[a-zA-Z ]+$/.test(lastNameInput.value.trim()) &&
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value) &&
     passwordInput.value.length >= 8 &&
     passwordInput.value.length <= 15
