@@ -45,7 +45,8 @@ p {
     float: left;
 }
 
-a#addTrainers  {
+a#addTrainers {
+    cursor: pointer;
     border: 0px;
     font-size: 19px;
     text-align: right;
