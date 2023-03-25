@@ -157,7 +157,7 @@ passwordToggle.addEventListener("click", () => {
       /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value) &&
       passwordInput.value.length >= 8
     ) {
-      // submit form
+      refresh.preventDefault();
 
       //creating <div>
       const li = document.createElement("li");
