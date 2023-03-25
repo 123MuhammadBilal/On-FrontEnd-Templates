@@ -106,22 +106,18 @@ passwordToggle.addEventListener("click", () => {
 
   const btn = document.getElementById("submit");
   btn.value = "Signup";
-
-  // Validate first name (must be at least 2 characters long)
   firstNameInput.addEventListener("blur", () => {
-    if (firstNameInput.value.length < 2) {
-      inputNameFirstValidation.innerHTML =
-        "First name must be at least 2 characters long";
+    if (firstNameInput.value.length < 2 || firstNameInput.value.length > 9) {
+      inputNameFirstValidation.innerHTML ="Last name must be more 2 characters and less then 9";
     } else {
       inputNameFirstValidation.innerHTML = "";
     }
   });
 
-  // Validate last name (must be at least 2 characters long)
   lastNameInput.addEventListener("blur", () => {
-    if (lastNameInput.value.length < 2) {
+    if (lastNameInput.value.length < 2 || lastNameInput.value.length > 9) {
       inputNameLastValidation.innerHTML =
-        "Last name must be at least 2 characters long";
+        "Last name must be more 2 characters and less then 9";
     } else {
       inputNameLastValidation.innerHTML = "";
     }
@@ -137,15 +133,14 @@ passwordToggle.addEventListener("click", () => {
     }
   });
 
-  // Validate password (must be at least 8 characters long)
-  passwordInput.addEventListener("blur", () => {
-    if (passwordInput.value.length < 8) {
-      inputPassValidation.innerHTML =
-        "Password must be at least 8 characters long";
-    } else {
-      inputPassValidation.innerHTML = "";
-    }
-  });
+passwordInput.addEventListener("blur", () => {
+  if (passwordInput.value.length < 8 || passwordInput.value.length > 15) {
+    inputPassValidation.innerHTML = "Password must be at least 8 characters and no more than 15 characters long.";
+  } else {
+    inputPassValidation.innerHTML = "";
+  }
+});
+
 
   form.addEventListener("submit", (refresh) => {
     //stop to refresh page on submit
@@ -153,9 +148,12 @@ passwordToggle.addEventListener("click", () => {
     //validations checking
     if (
       firstNameInput.value.length >= 2 &&
+      firstNameInput.value.length <= 9 &&
       lastNameInput.value.length >= 2 &&
+      lastNameInput.value.length <= 9 &&
       /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value) &&
-      passwordInput.value.length >= 8
+      passwordInput.value.length >= 8 &&
+      passwordInput.value.length <= 15
     ) {
       refresh.preventDefault();
 
