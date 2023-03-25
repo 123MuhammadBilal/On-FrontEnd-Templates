@@ -312,6 +312,7 @@ i#password-toggle {
 
 
 /* form */
+input[type="fname"],
 input[type="name"],
 input[type="mail"],
 input[type="password"] {
