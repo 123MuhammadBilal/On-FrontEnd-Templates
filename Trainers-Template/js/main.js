@@ -1,5 +1,57 @@
 //onload addEventListener
 window.addEventListener("load", () => {
+
+  // hide & show functions
+
+const container_trainer_add = document.getElementById("container_trainer_add");
+const addTrainers = document.getElementById("addTrainers");
+const crossBtn = document.getElementById("crossBtn");
+const mainCros = document.getElementById("mainCros");
+const banner = document.getElementById("banner");
+
+mainCros.addEventListener("click", () => {
+  if ((banner.style.display = "block")) {
+    banner.style.display = "none";
+  } else {
+    banner.style.display = "block";
+  }
+});
+addTrainers.addEventListener("click", () => {
+  if ((container_trainer_add.style.display = "none")) {
+    container_trainer_add.style.display = "block";
+  } else {
+    container_trainer_add.style.display = "none";
+  }
+});
+crossBtn.addEventListener("click", () => {
+  const saveElements = document.querySelectorAll("#SAVE");
+for (let i = 0; i < saveElements.length; i++) {
+  saveElements[i].click();
+}
+  if ((container_trainer_add.style.display = "block")) {
+    container_trainer_add.style.display = "none";
+  } else {
+    container_trainer_add.style.display = "block";
+  }
+});
+
+// password checker
+const passwordField = document.getElementById("inputPass");
+const passwordToggle = document.getElementById("password-toggle");
+passwordToggle.addEventListener("click", () => {
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    passwordToggle.classList.remove("fa-eye");
+    passwordToggle.classList.add("fa-eye-slash");
+    passwordField.classList.add("eyeManage");
+  } else {
+    passwordField.type = "password";
+    passwordToggle.classList.remove("fa-eye-slash");
+    passwordToggle.classList.add("fa-eye");
+    passwordField.classList.add("eyeManage");
+  }
+});
+
   //select input name first
   const inputNameFirst = document.querySelector("#inputNameFirst");
   //select input name last
@@ -250,17 +302,26 @@ window.addEventListener("load", () => {
         inputNameLast.value = nameL.innerHTML;
         inputGmail.value = mailG.innerHTML;
         inputPass.value = passW.innerHTML;
-
+      
         //append button to save editable element
         const saveme = document.createElement("button");
         saveme.innerHTML = "Save";
-
+      
         // using id for styling
         saveme.id = "SAVE";
         //hidding 'ADD' button
         btn.style.display = "none";
-
+      
         form.appendChild(saveme);
+      
+        let saveElements = document.querySelectorAll("#SAVE");
+        // Hide all the previous 'SAVE' elements except the last one
+        for (let i = 0; i === saveElements.length - 1; i++) {
+          saveElements[i].style.display = "none";
+        }
+        // Show the latest 'SAVE' element
+        saveElements[saveElements.length - 1].style.display = "block";
+      
         container_trainer_add.style.display = "block";
         saveme.addEventListener("click", () => {
           // update the values in the list
@@ -268,11 +329,11 @@ window.addEventListener("load", () => {
           nameL.innerHTML = inputNameLast.value;
           mailG.innerHTML = inputGmail.value;
           passW.innerHTML = inputPass.value;
-
+      
           // remove the "SAVE" button and show the "ADD" button
           form.removeChild(saveme);
           btn.style.display = "block";
-
+      
           // clear the input fields
           inputNameFirst.value = "";
           inputNameLast.value = "";
@@ -289,49 +350,4 @@ window.addEventListener("load", () => {
   });
 });
 
-// hide & show functions
 
-const container_trainer_add = document.getElementById("container_trainer_add");
-const addTrainers = document.getElementById("addTrainers");
-const crossBtn = document.getElementById("crossBtn");
-const mainCros = document.getElementById("mainCros");
-const banner = document.getElementById("banner");
-
-mainCros.addEventListener("click", () => {
-  if ((banner.style.display = "block")) {
-    banner.style.display = "none";
-  } else {
-    banner.style.display = "block";
-  }
-});
-addTrainers.addEventListener("click", () => {
-  if ((container_trainer_add.style.display = "none")) {
-    container_trainer_add.style.display = "block";
-  } else {
-    container_trainer_add.style.display = "none";
-  }
-});
-crossBtn.addEventListener("click", () => {
-  if ((container_trainer_add.style.display = "block")) {
-    container_trainer_add.style.display = "none";
-  } else {
-    container_trainer_add.style.display = "block";
-  }
-});
-
-// password checker
-const passwordField = document.getElementById("inputPass");
-const passwordToggle = document.getElementById("password-toggle");
-passwordToggle.addEventListener("click", () => {
-  if (passwordField.type === "password") {
-    passwordField.type = "text";
-    passwordToggle.classList.remove("fa-eye");
-    passwordToggle.classList.add("fa-eye-slash");
-    passwordField.classList.add("eyeManage");
-  } else {
-    passwordField.type = "password";
-    passwordToggle.classList.remove("fa-eye-slash");
-    passwordToggle.classList.add("fa-eye");
-    passwordField.classList.add("eyeManage");
-  }
-});
