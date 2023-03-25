@@ -314,7 +314,8 @@ i#password-toggle {
 /* form */
 input[type="fname"],
 input[type="name"],
-input[type="mail"],
+input[type="text"],
+input[type="email"],
 input[type="password"] {
     background-color: #fff;
     border: 2px solid #dbdada;

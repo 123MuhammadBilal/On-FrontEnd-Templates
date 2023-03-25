@@ -15,21 +15,24 @@ const submit = document.getElementById("submit");
 
 
 firstNameInput.addEventListener("blur", () => {
-if (firstNameInput.value.length < 2 || firstNameInput.value.length > 9) {
-inputNameFirstValidation.innerHTML ="Last name must be more 2 characters and less then 9";
-} else {
-inputNameFirstValidation.innerHTML = "";
-}
-});
+    const regex = /^[a-zA-Z ]+$/;
+    const firstName = firstNameInput.value.trim();
+    if (!regex.test(firstName) || firstName.length < 2 || firstName.length > 9) {
+      inputNameFirstValidation.innerHTML = "First name must be between 2 and 9 characters long and contain only letters and spaces.";
+    } else {
+      inputNameFirstValidation.innerHTML = "";
+    }
+  });
 
-lastNameInput.addEventListener("blur", () => {
-if (lastNameInput.value.length < 2 || lastNameInput.value.length > 9) {
-inputNameLastValidation.innerHTML =
-"Last name must be more 2 characters and less then 9";
-} else {
-inputNameLastValidation.innerHTML = "";
-}
-});
+  lastNameInput.addEventListener("blur", () => {
+    const regex = /^[a-zA-Z ]+$/;
+    const lastName = lastNameInput.value.trim();
+    if (!regex.test(lastName) || lastName.length < 2 || lastName.length > 9) {
+        inputNameLastValidation.innerHTML = "First name must be between 2 and 9 characters long and contain only letters and spaces.";
+    } else {
+        inputNameLastValidation.innerHTML = "";
+    }
+  });
 
 // Validate email (must be a valid email address)
 emailInput.addEventListener("blur", () => {
