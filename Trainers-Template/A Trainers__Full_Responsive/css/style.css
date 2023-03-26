@@ -188,13 +188,14 @@ input[type="email"],
 input[type="password"] {
     background-color: #fff;
     border: 2px solid #dbdada;
-    color: #000;
+    color: #0084ff;
     padding: 10px;
     margin: 11px 2px 11px 5px;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
     font-size: 16px;
+    outline: none;
 }
 
 /* Submit button */
@@ -228,7 +229,10 @@ input[type="password"] {
 
 /* Form container */
 #container_trainer_add {
-    background-color: #2196F3;
+    background-image: url('../imgs/download.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     top: 0;
     left: 0;
     right: 0;
@@ -241,15 +245,18 @@ input[type="password"] {
     position: absolute;
 }
 
-/* Form */
 #taskForm {
-    background-color: #fff;
+    background-color: #ffffff59;
     padding: 20px;
     border-radius: 5px;
     box-sizing: border-box;
     max-width: 400px;
     text-align: left;
     margin: 98px auto;
+}
+#taskForm h1 {
+    text-align: center;
+    color: white;
 }
 
 
@@ -373,7 +380,7 @@ i#password-toggle {
     margin-top: -40px;
     z-index: 999999;
     position: relative;
-    color: dimgray;
+    color: #0084ff;
 }
 
 

@@ -77,3 +77,22 @@ submitBtn.addEventListener("click", (event) => {
     inputPassValidation.innerHTML = "Please fill the form carefully";
   }
 });
+
+
+
+  // password checker
+  const passwordField = document.getElementById("inputPass");
+  const passwordToggle = document.getElementById("password-toggle");
+  passwordToggle.addEventListener("click", () => {
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      passwordToggle.classList.remove("fa-eye");
+      passwordToggle.classList.add("fa-eye-slash");
+      passwordField.classList.add("eyeManage");
+    } else {
+      passwordField.type = "password";
+      passwordToggle.classList.remove("fa-eye-slash");
+      passwordToggle.classList.add("fa-eye");
+      passwordField.classList.add("eyeManage");
+    }
+  });

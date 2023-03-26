@@ -1,21 +1,36 @@
-// form validation
+//    _____________________________________________________________________________
+//    |                                                                           |
+//    |                   [[    form validation scripts are here    ]]            |
+//    | __________________________________________________________________________|
 
+
+
+// select input values to get input
 const firstNameInput = document.getElementById("inputNameFirst");
 const lastNameInput = document.getElementById("inputNameLast");
 const emailInput = document.getElementById("inputText");
 const passwordInput = document.getElementById("inputPass");
+//selection done
 
-const inputNameFirstValidation = document.getElementById(
-  "inputNameFirstValidation"
-);
-const inputNameLastValidation = document.getElementById(
-  "inputNameLastValidation"
-);
+
+// select the span to show the validation
+const inputNameFirstValidation = document.getElementById("inputNameFirstValidation");
+const inputNameLastValidation = document.getElementById("inputNameLastValidation");
 const inputTextValidation = document.getElementById("inputTextValidation");
 const inputPassValidation = document.getElementById("inputPassValidation");
+//selection done
 
-const form = document.querySelector("form");
-const submit = document.getElementById("submit");
+
+
+//select the submit button to submit form on click
+const submitBtn = document.getElementById("submit");
+//selection done
+
+
+
+
+//adding eventlistner on all input feild for check the validation
+
 
 firstNameInput.addEventListener("blur", () => {
   const regex = /^[a-zA-Z ]+$/;
@@ -39,7 +54,6 @@ lastNameInput.addEventListener("blur", () => {
   }
 });
 
-// Validate email (must be a valid email address)
 emailInput.addEventListener("blur", () => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!regex.test(emailInput.value)) {
@@ -57,10 +71,13 @@ passwordInput.addEventListener("blur", () => {
     inputPassValidation.innerHTML = "";
   }
 });
-// add an event listener to the button
-const submitBtn = document.getElementById("submit");
-submitBtn.addEventListener("click", (event) => {
-  event.preventDefault(); // prevent the form from submitting
+
+
+
+// add event listener to submit form on click
+
+submitBtn.addEventListener("submit", (event) => {
+  event.preventDefault(); 
   if (
     firstNameInput.value.length >= 2 &&
     firstNameInput.value.length <= 9 &&
@@ -72,7 +89,7 @@ submitBtn.addEventListener("click", (event) => {
     passwordInput.value.length >= 8 &&
     passwordInput.value.length <= 15
   ) {
-    location.replace("index.html");
+    location.href('index.html')
   } else {
     inputPassValidation.innerHTML = "Please fill the form carefully";
   }
