@@ -324,13 +324,11 @@ input[type="password"] {
     margin: 11px 2px 11px 5px;
     border-radius: 5px;
     width: 100%;
-    box-sizing: border-box;
     font-size: 16px;
 }
 
 /* Submit button */
-#submit,
-#SAVE {
+#submit{
     background-color: #0084ff;
     border: none;
     color: #fff;
@@ -338,51 +336,9 @@ input[type="password"] {
     margin: 10px 0px 10px 0px;
     border-radius: 5px;
     width: 100%;
-    box-sizing: border-box;
     font-size: 16px;
     cursor: pointer;
 }
-
-/* Cross button */
-#crossBtn {
-    background-color: #0000;
-    border: none;
-    color: #fff;
-    padding: 5px;
-    border-radius: 50%;
-    font-size: 16px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-/* Form container */
-#container_trainer_add {
-    background-color: #2196F3;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    display: block;
-    overflow: auto;
-    float: left;
-    width: 100%;
-    position: absolute;
-}
-
-/* Form */
-#taskForm {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    max-width: 400px;
-    text-align: left;
-    margin: 98px auto;
-}
-
 
 
 @media only screen and (max-width: 820px) {
