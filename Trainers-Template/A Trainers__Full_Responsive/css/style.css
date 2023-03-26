@@ -1,0 +1,449 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+a,
+li,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* 
+                    section container
+*/
+.container {
+    max-width: 1315px;
+    margin: 0 auto;
+}
+
+.navigation {
+    float: left;
+    width: 100%;
+}
+
+.navIco {
+    float: left;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.navIco img {
+    float: left;
+    width: 30px;
+}
+
+.navIco p {
+    font-size: 20px;
+    text-align: left;
+    color: #0084ff;
+    margin: 0px 8px;
+    float: left;
+}
+
+a#addTrainers {
+    cursor: pointer;
+    border: 0px;
+    font-size: 19px;
+    text-align: right;
+    color: rgb(0, 132, 255);
+    margin: 0px 8px;
+    float: right;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.07) 2px 2px 5px;
+}
+
+
+
+
+/* 
+                    section banner
+*/
+
+
+.banner {
+    float: left;
+    width: 98.6%;
+    background: #dbdada;
+    padding: 10px 7px 10px 10px;
+}
+.userProfile {
+    float: left;
+    width: 65%;
+}
+
+.userProfile img {
+    float: left;
+    margin-right: 16px;
+    width: 38px;
+}
+
+.userProfile h4 {
+    font-size: 16px;
+    text-align: left;
+    color: #a7a6a6;
+}
+
+.userProfile p {
+    font-size: 15px;
+    text-align: left;
+    color: #0084ff;
+}
+
+.action {
+    text-align: right;
+    width: 20%;
+    float: right;
+    color: #0084ff;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.action i {
+    font-size: 18px;
+    color: #a7a6a6;
+    padding: 0px 7px;
+    font-weight: lighter;
+}
+
+.options {
+    position: absolute;
+    list-style-type: none;
+    color: #a7a6a6;
+    background-color: #fff;
+    box-shadow: 0px 2px 3px #a7a6a6;
+    text-align: center;
+    margin: 5px 17px;
+    padding: 4px 10px;
+    opacity: 0;
+}
+
+.user {
+    float: left;
+    width: 100%;
+}
+
+.personalDetails {
+    padding: 40px 0px 0px 0px;
+    float: left;
+    width: 100%;
+}
+
+.userImg {
+    width: 25%;
+    float: left;
+}
+
+.userImg img {
+    float: left;
+    width: 70%;
+}
+
+.userDetails {
+    flex-wrap: wrap;
+    display: flex;
+    float: left;
+    width: 75%;
+    align-items: center;
+    justify-content: left;
+}
+
+.mainDetails {
+    flex: auto;
+    margin: 5px;
+    text-align: left;
+    float: left;
+}
+
+.details {
+    margin-bottom: 15px;
+}
+
+.details h1 {
+    font-size: 17px;
+}
+
+.details h2 {
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+
+/* form */
+
+/* form */
+input[type="fname"],
+input[type="name"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: #fff;
+    border: 2px solid #dbdada;
+    color: #000;
+    padding: 10px;
+    margin: 11px 2px 11px 5px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Submit button */
+#submit,
+#SAVE {
+    background-color: #0084ff;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Cross button */
+#crossBtn {
+    background-color: #0000;
+    border: none;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Form container */
+#container_trainer_add {
+    background-color: #2196F3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: block;
+    overflow: auto;
+    float: left;
+    width: 100%;
+    position: absolute;
+}
+
+/* Form */
+#taskForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    max-width: 400px;
+    text-align: left;
+    margin: 98px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+                    trainer Add
+*/
+.container_trainer_add {
+    float: left;
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    background-color: #0084ff;
+}
+
+.container_appending {
+    max-width: 1329px;
+    margin: 0 auto;
+}
+
+/* Trainer details */
+#appendTrainer {
+    margin: 5px 0px 0px 0px;
+}
+
+
+#appendTrainer li {
+    cursor: pointer;
+    float: left;
+    width: 31%;
+    background-color: #dbdada;
+    padding: 10px;
+    margin: 5px;
+    list-style-type: none;
+}
+
+
+
+
+.appendTrainer {
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    font-size: 24px;
+    color: #a7a6a6;
+}
+
+.liClicker {
+    padding: 20px 10px 1px 10px;
+    margin: 10px 10px 10px 9px;
+    flex-grow: 3;
+    background: #dbdada;
+}
+
+.listImg {
+    float: left;
+    width: 11%;
+}
+
+.listImg img {
+    float: left;
+    width: 100%;
+}
+
+.listDetails {
+    float: left;
+    width: 40%;
+    margin: 0px 10px;
+}
+
+.listDetails p {
+    color: #0084ff;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.listIcon {
+    float: right;
+    color: #a7a6a6;
+    margin: 10px 0px 25px 0px;
+}
+
+.listIcon i {
+    cursor: pointer;
+    padding: 0px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.eyeManage {
+    background-color: #fff;
+    border: 2px solid #dbdada;
+    color: #000;
+    padding: 10px;
+    margin: 11px 2px 11px 5px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+i#password-toggle {
+    cursor: pointer;
+    float: right;
+    margin-top: -40px;
+    z-index: 999999;
+    position: relative;
+    color: dimgray;
+}
+
+
+.container_trainer_add span {
+    color: red;
+}
+
+
+
+/* 
+                    trainers
+*/
+
+.container_trainers {
+    max-width: 1345px;
+    margin: 0 auto;
+}
+
+.trainerDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    float: left;
+    width: 100%;
+}
+
+.trainers {
+    padding: 5px 17px 5px 8px;
+    float: left;
+    width: 29%;
+    background: #dbdada;
+    margin: 14px 14px 0px 14px;
+}
+
+
+
+
+
+
+                    /* using flex box */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0px 22px 0px 10px;
+    }
+    .userImg {
+        width: 50%;
+        float: none;
+        margin: 0 auto;
+    }
+    .userDetails {
+        flex-wrap: wrap;
+        display: flex;
+        float: left;
+        width: 100%;
+        margin: 26px 0px;
+        align-items: center;
+        justify-content: left;
+    }
+    .mainDetails {
+        flex: auto;
+        margin: 0px 5px 25px 0px;
+        text-align: left;
+        float: left;
+    }
+    a#addTrainers {
+        width: 80%;
+        text-align: center;
+    }
+    .liClicker {
+        padding: 20px 17px 1px 22px;
+        margin: 10px 0px 10px 10px;
+    }
+}

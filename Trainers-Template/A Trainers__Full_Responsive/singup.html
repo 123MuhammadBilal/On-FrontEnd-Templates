@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+    <title>SingUp</title>
+</head>
+
+<body>
+    <!-- singup form -->
+    <div class="container_trainer_add" id="container_trainer_add">
+        <form id="taskForm">
+            <input type="text" name="text" id="inputNameFirst" placeholder="first name" autocomplete="off" required />
+            <span id="inputNameFirstValidation"></span>
+            <input type="text" name="text" id="inputNameLast" placeholder="last name" autocomplete="off" required />
+            <span id="inputNameLastValidation"></span>
+            <input type="email" name="text" id="inputText" placeholder="email address" autocomplete="off" required />
+            <span id="inputTextValidation"></span>
+            <input type="password" name="text" id="inputPass" placeholder="password" autocomplete="off" required />
+            <i id="password-toggle" class="fa fa-eye"></i>
+            <span id="inputPassValidation"></span>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+
+    <!-- javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/singup.js"></script>
+</body>
+</html>
+
